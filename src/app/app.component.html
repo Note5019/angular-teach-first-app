@@ -8,8 +8,15 @@
         <label>Last Name</label>
         <input type="text" class="form-control" #lastName>
       </div>
-      <button type="button" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-primary" (click)="onclick(firstName,lastName)">Submit</button>
     </form>
-    
+    <app-card *ngFor="let cardzzz of sorted" [card]="cardzzz"></app-card>
+    <ol>
+      <li *ngFor="let card of cards">
+        {{card.firstname}}
+        {{card.lastname}}
+        {{card.votes}}
+      </li>
+    </ol>
   </div>
   
